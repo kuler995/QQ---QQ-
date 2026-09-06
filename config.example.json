@@ -1,0 +1,34 @@
+{
+  "_comment": "这是配置模板文件，首次启动会自动复制为 config.json。API KEY 已预填，可直接使用。",
+  "agnes_ai": {
+    "api_key": "sk-zGDHQw8eYMi7nzSQ37t4p2ahhQipnoJBD9FMWNdOutXOtYQP",
+    "base_url": "https://apihub.agnes-ai.cn/v1",
+    "image_base_url": "https://apihub.agnes-ai.com/v1",
+    "image_model": "agnes-image-2.1-flash",
+    "text_model": "agnes-2.0-flash"
+  },
+  "weather": {
+    "api_key": "f3967f30ced34e54a417acc145065d67",
+    "api_host": "",
+    "city": "焦作",
+    "location_id": "101181101"
+  },
+  "storage": {
+    "base_path": "",
+    "image_quality": 85
+  },
+  "tags": {
+    "required": ["#早安理工#", "#晚安理工#", "#小青超推荐#", "#每日话题#"],
+    "morning_extra": [],
+    "night_extra": [],
+    "recommend_extra": ["#小青爱分享#"],
+    "share_extra": ["#小青爱分享#"]
+  },
+  "generation": {
+    "candidates_per_item": 3,
+    "recommend_daily_min": 1,
+    "recommend_daily_max": 2,
+    "share_daily_min": 1,
+    "share_daily_max": 2
+  }
+}
