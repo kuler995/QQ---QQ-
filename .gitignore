@@ -1,0 +1,52 @@
+# ===== Python 缓存 =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== 项目私有配置（含真实 API KEY，绝对不能提交！）=====
+src/config.json
+config.json
+
+# ===== 日志文件 =====
+logs/
+*.log
+
+# ===== 打包产物 =====
+build/
+dist/
+*.spec
+小青素材/
+自动早晚安小助手_*.zip
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ===== 测试临时生成的图片/草稿 =====
+tests/test_agnes_*.jpg
+tests/test_img_*.png
+tests/_test_*.py
+
+# ===== 临时截图/调试文件 =====
+screenshot_*.png
+screenshot_*.jpg
+test_screenshot.py
+*.tmp
+
+# ===== OS 文件 =====
+desktop.ini
