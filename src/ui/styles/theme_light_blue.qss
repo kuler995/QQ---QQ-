@@ -1,0 +1,323 @@
+/* ==========================================================
+ * 自动早晚安小助手 - 淡蓝色主题
+ * 参考文档：docs/03_UI设计规范.md
+ * 所有颜色、字体、间距严格按规范来，不要随便改
+ * ========================================================== */
+
+/* ========== 1. 全局窗口与基础（毛玻璃：中心透明，面板半透明叠加壁纸） ========== */
+QMainWindow, QWidget {
+    background-color: transparent;
+    color: #2C3E50;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow {
+    border-radius: 12px;
+    background-color: #EBF4FB;  /* 兜底纯色（壁纸加载失败时） */
+}
+
+QWidget#centralWidget {
+    background-color: transparent;
+}
+
+QLabel#wallpaperBg {
+    background-color: transparent;
+}
+
+/* ========== 2. 标签（文字） ========== */
+QLabel {
+    color: #2C3E50;
+    background-color: transparent;
+}
+
+QLabel#windowTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C3E50;
+    padding-left: 8px;
+}
+
+QLabel#moduleTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4A90D9;
+    padding: 0px;
+}
+
+QLabel#cardTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+QLabel#cardText {
+    font-size: 13px;
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+QLabel#cardTags {
+    font-size: 12px;
+    color: #4A90D9;
+}
+
+QLabel#statusText, QLabel#helperText {
+    font-size: 11px;
+    color: #7F8C8D;
+}
+
+QLabel#dateText {
+    font-size: 13px;
+    color: #2C3E50;
+    font-weight: 500;
+}
+
+/* ========== 3. 按钮（苹果圆润风：大圆角 + 微阴影） ========== */
+QPushButton {
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* 3.1 主按钮：蓝色实心 */
+QPushButton[btnType="primary"] {
+    background-color: #4A90D9;
+    color: #FFFFFF;
+    border: none;
+}
+QPushButton[btnType="primary"]:hover {
+    background-color: #3A7BC8;
+}
+QPushButton[btnType="primary"]:pressed {
+    background-color: #2E6AB0;
+}
+QPushButton[btnType="primary"]:disabled {
+    background-color: #A9C5E8;
+    color: #FFFFFF;
+}
+
+/* 3.2 次按钮：蓝色描边 */
+QPushButton[btnType="secondary"] {
+    background-color: #FFFFFF;
+    color: #4A90D9;
+    border: 1px solid #4A90D9;
+}
+QPushButton[btnType="secondary"]:hover {
+    background-color: #EBF4FB;
+}
+QPushButton[btnType="secondary"]:pressed {
+    background-color: #D4E6F7;
+}
+QPushButton[btnType="secondary"]:disabled {
+    background-color: #F4F9FD;
+    color: #A9C5E8;
+    border-color: #D4E6F7;
+}
+
+/* 3.3 普通按钮：灰色描边 */
+QPushButton[btnType="normal"] {
+    background-color: #FFFFFF;
+    color: #2C3E50;
+    border: 1px solid #D4E6F7;
+}
+QPushButton[btnType="normal"]:hover {
+    background-color: #F4F9FD;
+    border-color: #4A90D9;
+    color: #4A90D9;
+}
+QPushButton[btnType="normal"]:pressed {
+    background-color: #EBF4FB;
+}
+
+/* 3.4 警告按钮：红色描边 */
+QPushButton[btnType="danger"] {
+    background-color: #FFFFFF;
+    color: #E74C3C;
+    border: 1px solid #E74C3C;
+}
+QPushButton[btnType="danger"]:hover {
+    background-color: #FDEDEC;
+}
+
+/* 小按钮（卡片上的操作按钮）：更小的 padding */
+QPushButton[btnSize="small"] {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* ========== 4. 面板/卡片（半透明白色 + 白色细边框 + 大圆角） ========== */
+QFrame#modulePanel {
+    background-color: rgba(255, 255, 255, 185);
+    border: 1px solid rgba(255, 255, 255, 220);
+    border-radius: 16px;
+}
+
+QFrame#cardPanel {
+    background-color: rgba(255, 255, 255, 200);
+    border: 1px solid rgba(255, 255, 255, 220);
+    border-radius: 14px;
+}
+QFrame#cardPanel:hover {
+    border: 1px solid rgba(74, 144, 217, 200);
+}
+
+QFrame#headerBar, QFrame#actionBar {
+    background-color: transparent;
+}
+
+QFrame#topBar, QFrame#bottomBar {
+    background-color: rgba(255, 255, 255, 190);
+    border: 1px solid rgba(255, 255, 255, 220);
+    border-radius: 14px;
+}
+
+/* ========== 5. 滚动条（细淡蓝色，不要系统粗灰条） ========== */
+QScrollBar:vertical {
+    background-color: transparent;
+    width: 8px;
+    margin: 2px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical {
+    background-color: #A9C5E8;
+    min-height: 30px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #4A90D9;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: transparent;
+    height: 8px;
+    margin: 2px;
+    border-radius: 4px;
+}
+QScrollBar::handle:horizontal {
+    background-color: #A9C5E8;
+    min-width: 30px;
+    border-radius: 4px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: #4A90D9;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ========== 6. 分割线 ========== */
+QFrame[frameShape="4"], QFrame[frameShape="5"] {
+    /* HLine / VLine */
+    color: #E1EFFA;
+    background-color: #E1EFFA;
+    max-height: 1px;
+    max-width: 1px;
+}
+
+/* ========== 7. 输入框（阶段2用，先写好） ========== */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #D4E6F7;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #2C3E50;
+    selection-background-color: #4A90D9;
+    selection-color: #FFFFFF;
+}
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #4A90D9;
+}
+
+QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #D4E6F7;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #2C3E50;
+}
+QComboBox:focus {
+    border: 1px solid #4A90D9;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #4A90D9;
+    margin-right: 8px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #D4E6F7;
+    selection-background-color: #EBF4FB;
+    selection-color: #2C3E50;
+    outline: 0px;
+}
+
+QSlider::groove:horizontal {
+    height: 4px;
+    background: #D4E6F7;
+    border-radius: 2px;
+}
+QSlider::handle:horizontal {
+    background: #4A90D9;
+    width: 16px;
+    height: 16px;
+    margin: -6px 0;
+    border-radius: 8px;
+}
+QSlider::handle:horizontal:hover {
+    background: #3A7BC8;
+}
+
+/* ========== 8. 进度条（加载中用） ========== */
+QProgressBar {
+    border: 1px solid #D4E6F7;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #2C3E50;
+    font-size: 11px;
+    height: 12px;
+}
+QProgressBar::chunk {
+    background-color: #4A90D9;
+    border-radius: 3px;
+}
+
+/* ========== 9. 菜单与提示框 ========== */
+QToolTip {
+    background-color: #FFFFFF;
+    color: #2C3E50;
+    border: 1px solid #D4E6F7;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #D4E6F7;
+    border-radius: 6px;
+    padding: 4px;
+}
+QMenu::item {
+    padding: 6px 20px;
+    border-radius: 4px;
+    color: #2C3E50;
+}
+QMenu::item:selected {
+    background-color: #EBF4FB;
+    color: #4A90D9;
+}
